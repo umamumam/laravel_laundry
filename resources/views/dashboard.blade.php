@@ -6,82 +6,102 @@
     <div class="row">
         <div class="col-lg-6 col-12">
             <div class="row">
+                <!-- Jumlah Order -->
                 <div class="col-lg-6 col-md-6 col-12">
-                    <div class="card">
+                    <div class="card shadow-lg">
                         <span class="mask bg-primary opacity-10 border-radius-lg"></span>
                         <div class="card-body p-3 position-relative">
                             <div class="row">
                                 <div class="col-8 text-start">
                                     <div class="icon icon-shape bg-white shadow text-center border-radius-2xl">
-                                        <i class="ni ni-circle-08 text-dark text-gradient text-lg opacity-10"
-                                            aria-hidden="true"></i>
+                                        <i class="fa fa-shopping-cart text-primary fa-2x"></i>
                                     </div>
                                     <h5 class="text-white font-weight-bolder mb-0 mt-3">
-                                        1600
+                                        {{ $totalOrder }}
                                     </h5>
-                                    <span class="text-white text-sm">Users Active</span>
+                                    <span class="text-white text-sm">Jumlah Order</span>
                                 </div>
-                                <div class="col-4">
-                                    <div class="dropdown text-end mb-6">
-                                        <a href="javascript:;" class="cursor-pointer" id="dropdownUsers1"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="fa fa-ellipsis-h text-white"></i>
-                                        </a>
-                                        <ul class="dropdown-menu px-2 py-3" aria-labelledby="dropdownUsers1">
-                                            <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a>
-                                            </li>
-                                            <li><a class="dropdown-item border-radius-md" href="javascript:;">Another
-                                                    action</a></li>
-                                            <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else
-                                                    here</a></li>
-                                        </ul>
-                                    </div>
-                                    <p class="text-white text-sm text-end font-weight-bolder mt-auto mb-0">+55%
-                                    </p>
+                                <div class="col-4 text-end">
+                                    <i class="fa fa-ellipsis-h text-white"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            
+                <!-- Total Pendapatan -->
                 <div class="col-lg-6 col-md-6 col-12 mt-4 mt-md-0">
-                    <div class="card">
+                    <div class="card shadow-lg">
                         <span class="mask bg-dark opacity-10 border-radius-lg"></span>
                         <div class="card-body p-3 position-relative">
                             <div class="row">
                                 <div class="col-8 text-start">
                                     <div class="icon icon-shape bg-white shadow text-center border-radius-2xl">
-                                        <i class="ni ni-active-40 text-dark text-gradient text-lg opacity-10"
-                                            aria-hidden="true"></i>
+                                        <i class="fa fa-wallet text-info fa-2x"></i>
                                     </div>
                                     <h5 class="text-white font-weight-bolder mb-0 mt-3">
-                                        357
+                                        Rp {{ number_format($totalRevenue, 0, ',', '.') }}
                                     </h5>
-                                    <span class="text-white text-sm">Click Events</span>
+                                    <span class="text-white text-sm">Total Pendapatan</span>
                                 </div>
-                                <div class="col-4">
-                                    <div class="dropstart text-end mb-6">
-                                        <a href="javascript:;" class="cursor-pointer" id="dropdownUsers2"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="fa fa-ellipsis-h text-white"></i>
-                                        </a>
-                                        <ul class="dropdown-menu px-2 py-3" aria-labelledby="dropdownUsers2">
-                                            <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a>
-                                            </li>
-                                            <li><a class="dropdown-item border-radius-md" href="javascript:;">Another
-                                                    action</a></li>
-                                            <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else
-                                                    here</a></li>
-                                        </ul>
-                                    </div>
-                                    <p class="text-white text-sm text-end font-weight-bolder mt-auto mb-0">
-                                        +124%</p>
+                                <div class="col-4 text-end">
+                                    <i class="fa fa-ellipsis-h text-white"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
             <div class="row mt-4">
+                <!-- Jumlah Pelanggan -->
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="card shadow-lg">
+                        <span class="mask bg-info opacity-10 border-radius-lg"></span>
+                        <div class="card-body p-3 position-relative">
+                            <div class="row">
+                                <div class="col-8 text-start">
+                                    <div class="icon icon-shape bg-white shadow text-center border-radius-2xl">
+                                        <i class="fa fa-users text-info fa-2x"></i>
+                                    </div>
+                                    <h5 class="text-white font-weight-bolder mb-0 mt-3">
+                                        {{ $totalCustomers }}
+                                    </h5>
+                                    <span class="text-white text-sm">Jumlah Pelanggan</span>
+                                </div>
+                                <div class="col-4 text-end">
+                                    <i class="fa fa-ellipsis-h text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Layanan Laundry -->
+                <div class="col-lg-6 col-md-6 col-12 mt-4 mt-md-0">
+                    <div class="card shadow-lg">
+                        <span class="mask bg-dark opacity-10 border-radius-lg"></span>
+                        <div class="card-body p-3 position-relative">
+                            <div class="row">
+                                <div class="col-8 text-start">
+                                    <div class="icon icon-shape bg-white shadow text-center border-radius-2xl">
+                                        <i class="fa fa-box text-dark fa-2x"></i>
+                                    </div>
+                                    <h5 class="text-white font-weight-bolder mb-0 mt-3">
+                                        {{ $totalLayanan }}
+                                    </h5>
+                                    <span class="text-white text-sm">Layanan Laundry</span>
+                                </div>
+                                <div class="col-4 text-end">
+                                    <i class="fa fa-ellipsis-h text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            {{-- <div class="row mt-4">
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="card">
                         <span class="mask bg-dark opacity-10 border-radius-lg"></span>
@@ -156,7 +176,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
         <div class="col-lg-6 col-12 mt-4 mt-lg-0">
             <div class="card shadow h-100">
